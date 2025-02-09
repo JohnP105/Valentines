@@ -4,6 +4,9 @@
   --secondary-color: #ff304f;
   --heart-size: 20px;
 }
+body {
+  overflow: hidden; 
+}
 
 /* Container */
 .heart-container {
