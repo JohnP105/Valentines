@@ -2,7 +2,7 @@
 
 /* Container */
 .valentine-container {
-  background: #ffd5e3;
+  background: linear-gradient(135deg, #f4a8b8, #f8c8d1, #ff7eb9);
   height: 100%;
   width: 100%;
   display: grid;
