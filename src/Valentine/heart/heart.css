@@ -71,7 +71,7 @@
   width: 82%;
 }
 
-.mainHeart svg .drawHeart {
+.drawHeart {
   fill: none;
   stroke: #d63b3b;
   stroke-linejoin: bevel;

@@ -4,6 +4,9 @@ import "./heart.css";
 
 function Heart() {
   useEffect(() => {
+    for (let i = 0; i < 50; i++) {
+      setTimeout(createHeart, i * 100); // Create hearts with slight delay
+    }
     // Insert small hearts dynamically into the DOM
     const total = 13;
     const container = document.querySelector(".smallHearts");
@@ -18,9 +21,6 @@ function Heart() {
     // Trigger the animation after the small hearts are appended
     playAudio();
     smallHeartAnim();
-    for (let i = 0; i < 50; i++) {
-      setTimeout(createHeart, i * 100); // Create hearts with slight delay
-    }
   }, []);
 
   // Function to play the audio when clicked

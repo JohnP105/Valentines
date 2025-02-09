@@ -71,6 +71,19 @@ function Valentine() {
     }
   };
 
+  // Animate and change state when user clicks "Yes"
+  const handleYesClick = () => {
+    // Create an animation for the "Yes" button and the invite container
+    const tl = gsap.timeline();
+    tl.to("#yesButton", { scale: 1.5, duration: 0.4, ease: "power2.out" })
+      .to("#yesButton", { opacity: 0, duration: 0.2, delay: 0.2 }) // Fade out the "Yes" button
+      .to(".invite-container", {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => setAccept(true), // Switch to the Heart after the fade-out
+      });
+  };
+
   return (
     <div className="valentine-container">
       {accept ? (
@@ -123,7 +136,7 @@ function Valentine() {
             <button
               className="btn yes-button"
               id="yesButton"
-              onClick={() => setAccept(true)}
+              onClick={handleYesClick} // Trigger the animation when clicked
             >
               Yes
             </button>
