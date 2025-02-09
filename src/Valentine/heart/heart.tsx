@@ -88,7 +88,7 @@ function Heart() {
         id="backgroundAudio"
         autoPlay
         loop
-        src="src/assets/both-male-female-audio.mp3"
+        src="src/assets/Lovers-female.mp3"
       ></audio>
 
       <div className="drawBox">
