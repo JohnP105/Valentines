@@ -4,23 +4,31 @@ import "./heart.css";
 
 function Heart() {
   useEffect(() => {
-    for (let i = 0; i < 50; i++) {
-      setTimeout(createHeart, i * 100); // Create hearts with slight delay
-    }
-    // Insert small hearts dynamically into the DOM
-    const total = 13;
-    const container = document.querySelector(".smallHearts");
-    if (container) {
-      for (let i = 0; i < total; i++) {
-        const span = document.createElement("span");
-        span.className = "smallHeart";
-        container.appendChild(span);
-      }
-    }
-
-    // Trigger the animation after the small hearts are appended
+    // Play the audio
     playAudio();
-    smallHeartAnim();
+
+    // Add a delay after the audio starts playing before creating hearts
+    const delayTime = 1000; // Delay in milliseconds (2 seconds)
+
+    setTimeout(() => {
+      for (let i = 0; i < 50; i++) {
+        setTimeout(createHeart, i * 100); // Create hearts with slight delay
+      }
+
+      // Insert small hearts dynamically into the DOM
+      const total = 13;
+      const container = document.querySelector(".smallHearts");
+      if (container) {
+        for (let i = 0; i < total; i++) {
+          const span = document.createElement("span");
+          span.className = "smallHeart";
+          container.appendChild(span);
+        }
+      }
+
+      // Trigger the small heart animation after the delay
+      smallHeartAnim();
+    }, delayTime); // Set the delay after the audio starts
   }, []);
 
   // Function to play the audio when clicked
