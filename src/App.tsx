@@ -1,9 +1,9 @@
 import "./App.css";
-import Valentine from "./drawBox/valentine";
+import Valentine from "./Valentine/valentine";
 
 function App() {
   return (
-    <div className="w-max">
+    <div className="w-screen h-screen flex justify-center items-center bg-white">
       <Valentine />
     </div>
   );

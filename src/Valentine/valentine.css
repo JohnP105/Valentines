@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+/* Container */
+.valentine-container {
+  background: #ffd5e3;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+
+.invite-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text Animation */
+.greetings-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-size: 2.5rem;
+
+}
+
+.greeting, .greeting-valentine {
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.greeting-valentine {
+  font-size: 6rem;
+  color: #ff5678;
+  font-weight: bolder;
+}
+
+.s, .v {
+  display: table-cell;
+  padding: 0 1px;
+  opacity: 0;
+}
+
+.space {
+  padding-left: 10px;
+}
+/* Style for the buttons container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Base button styles */
+.btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Specific styles for the "Yes" button */
+.yes-button {
+  background-color: #ff5c8d; /* Pink color */
+  color: white;
+  box-shadow: 0px 6px 15px rgba(255, 92, 141, 0.4);
+}
+
+.yes-button:hover {
+  background-color: #ff2a59; /* Darker pink on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+/* Adding delay before the No button starts moving */
+.no-button {
+  position: relative;
+  background-color: #f0b3c5;
+  color: white;
+  box-shadow: 0px 6px 15px rgba(240, 179, 197, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.no-button:hover {
+  background-color: #e60044;
+  transform: scale(1.05); /* Slight scaling on hover */
+  transition-delay: 0.2s; /* Delay the transformation for smoothness */
+}
