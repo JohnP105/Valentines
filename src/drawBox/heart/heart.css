@@ -1,0 +1,49 @@
+.heart-container {
+    position: relative;
+    width: 400px; 
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  /* Heart shape */
+  .heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #ec4899; 
+    transform: rotate(-45deg); /* Create the heart shape */
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ec4899; /* Pink heart color */
+  }
+  
+  .heart::before {
+    top: -100px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: 100px;
+    top: 0;
+  }
+  
+  /* Centering text inside the heart */
+  .valentine-title {
+    font-weight: bold;
+    color: #fff; 
+    font-family: "Amatic SC", cursive;
+    font-size: 2.5rem; 
+    position: absolute; 
+    top: 25%;
+  }
+  
